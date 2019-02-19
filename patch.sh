@@ -6,7 +6,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 ## /usr/share/dblatex/latex/style/dbk_locale.sty
-F_DBK_LOCALE=$(locate dbk_locale.sty)
+F_DBK_LOCALE=$(locate dbk_locale.sty | head -n1)
 cat << EOF > tmp.txt
 \langsetupdbk{hu}{
   \def\examplename{P\'elda}
@@ -31,12 +31,12 @@ EOF
 sed -i "/Define the locale setups in docbook/r tmp.txt" $F_DBK_LOCALE
 
 ## /usr/share/dblatex/xsl/common/hu.xml
-F_HUXML=$(locate xsl/common/hu.xml)
+F_HUXML=$(locate xsl/common/hu.xml | head -n1)
 sed -i "s|\" &#233;s \"|\" \\\'{e\}s \"|g" $F_HUXML
 sed -i "s|\", &#233;s \"|\", \\\'{e\}s \"|g" $F_HUXML
 
 ## /usr/share/dblatex/xsl/common/common.xsl
-F_COMMONXSL=$(locate xsl/common/common.xsl)
+F_COMMONXSL=$(locate xsl/common/common.xsl | head -n1)
 sed -i "s|<xsl:text> [FAMILY Given]</xsl:text>|<!--  <xsl:text> [FAMILY Given]</xsl:text> -->|g" $F_COMMONXSL
 
 # Cleanup

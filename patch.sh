@@ -53,6 +53,10 @@ fi
 #  </xsl:if>
 # kontextusban.
 # A sed kevésnek bizonyul ehhez.
+# Addig, a következő hacky megoldás:
+
+cp $F_COMMONXSL $F_COMMONXSL.bak
+sed -i "s|\ \ \ \ <xsl:text>, <\/xsl:text>|\ \ \ \ <xsl:text> <\/xsl:text>|g" $F_COMMONXSL
 
 # Cleanup
 rm -f tmp.txt >/dev/null 2>&1

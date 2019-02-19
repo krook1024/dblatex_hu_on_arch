@@ -8,9 +8,6 @@ megosztom a tapasztalataimat. Ezekkel a módosításokkal lényegesen javul a fe
 Ugyan én személy szerint Arch Linuxot használok, a szkript nagy valószínűséggel működni
 fog a többi Arch alapú disztró (Manjaro, Antergos, stb.) alatt is.
 
-Fontos megjegyezni viszont, hogy a fájlok nem biztos hogy minden disztró minden
-csomagjában ezeken a helyeken lesznek, ezek megkeresésére alkalmas pl. a `locate` parancs.
-A fájlok módosítása a fájlnévtől függetlenül a következőképpen végezendő el.
 
 # Hogyan futtasd?
 

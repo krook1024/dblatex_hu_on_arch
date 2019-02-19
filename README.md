@@ -8,7 +8,9 @@ megosztom a tapasztalataimat. Ezekkel a módosításokkal lényegesen javul a fe
 Fontos megjegyezni, hogy a fájlok nem biztos hogy minden disztró minden csomagában
 ezeken a helyeken lesznek, ezek megkeresésére alkalmas pl. a `locate` parancs.
 
-`/usr/share/dblatex/latex/style/dbk_locale.sty`
+## A szükséges módosítások
+
+### `/usr/share/dblatex/latex/style/dbk_locale.sty`
 
 ```latex
 \langsetupdbk{hu}{
@@ -32,7 +34,7 @@ ezeken a helyeken lesznek, ezek megkeresésére alkalmas pl. a `locate` parancs.
 }
 ```
 
-```/usr/share/dblatex/xsl/common/hu.xml```
+### `/usr/share/dblatex/xsl/common/hu.xml`
 
 501. sor:
 ```xml
@@ -43,7 +45,7 @@ ezeken a helyeken lesznek, ezek megkeresésére alkalmas pl. a `locate` parancs.
    </l:context>
 ```
 
-`/usr/share/dblatex/xsl/common/common.xsl`
+### `/usr/share/dblatex/xsl/common/common.xsl`
 
 `589.` sort kikommentelni:
 ```xml

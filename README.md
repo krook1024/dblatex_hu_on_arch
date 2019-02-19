@@ -5,8 +5,12 @@ szebben jelenjenek meg, valamint ne legyenek problémák a karakterkódolással,
 megosztom a tapasztalataimat. Ezekkel a módosításokkal lényegesen javul a felhasználói
 élmény.
 
-Fontos megjegyezni, hogy a fájlok nem biztos hogy minden disztró minden csomagában
-ezeken a helyeken lesznek, ezek megkeresésére alkalmas pl. a `locate` parancs.
+Ugyan én személy szerint Arch Linuxot használok, a tutorial nagy valószínűséggel működni
+fog a többi Arch alapú disztró (Manjaro, Antergos, stb.) alatt is.
+
+Fontos megjegyezni viszont, hogy a fájlok nem biztos hogy minden disztró minden
+csomagjában ezeken a helyeken lesznek, ezek megkeresésére alkalmas pl. a `locate` parancs.
+A fájlok módosítása a fájlnévtől függetlenül a következőképpen végezendő el.
 
 ## A szükséges módosítások
 

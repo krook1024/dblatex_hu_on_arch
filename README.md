@@ -12,6 +12,9 @@ ezeken a helyeken lesznek, ezek megkeresésére alkalmas pl. a `locate` parancs.
 
 ### `/usr/share/dblatex/latex/style/dbk_locale.sty`
 
+Ezt egy az egyben be kell másolni a fájlba valahová, érdemes oda, ahol a többi
+`\langsetupdbk` blokk található.
+
 ```latex
 \langsetupdbk{hu}{
   \def\examplename{P\'{e}lda}

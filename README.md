@@ -21,18 +21,18 @@ Ezt egy az egyben be kell másolni a fájlba valahová, érdemes oda, ahol a tö
 
 ```latex
 \langsetupdbk{hu}{
-  \def\examplename{P\'{e}lda}
+  \def\examplename{P\'elda}
   \def\dbequationname{Equation}
   \def\ondate{on}
   \renewcommand{\DBKreleaseinfo}{Munkaanyag}
-  \def\writtenby{\'{I}RTA}
+  \def\writtenby{\'IRTA}
   \def\projname{PROJEKT}
-  \def\titlename{C\'{I}M}
+  \def\titlename{C\'IM}
   \def\DBKrefname{REFERENCIA}
-  \def\DBKindname{N\'{E}V}
+  \def\DBKindname{N\'EV}
   \def\DBKindtitle{K\"OZREM\"UK\"ODTEK}
   \def\DBKrevtitle{VERZI\'OT\"ORT\'ENET}
-  \def\DBKrevdesc{LE\'{I}R\'{A}S}
+  \def\DBKrevdesc{LE\'IR\'AS}
   \def\DBKrevnumber{VERZI\'O}
   \def\DBKrevname{N\'EV}
   \def\DBKrevdate{D\'ATUM}

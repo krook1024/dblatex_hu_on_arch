@@ -1,4 +1,4 @@
-# DBLaTeX magyar kompatibilitás Arch Linux alatt
+# DBLaTeX magyar kompatibilitás Arch Linux (és más disztrók) alatt
 
 Mivel volt némi problémám a DBLaTeX "magyarosításával", hogy a lefordított dokumentumok
 szebben jelenjenek meg, valamint ne legyenek problémák a karakterkódolással, gondoltam

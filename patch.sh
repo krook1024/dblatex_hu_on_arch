@@ -32,20 +32,36 @@ if ! grep -qF "\langsetupdbk{hu}" $F_DBK_LOCALE;then
   \def\DBKsignature{AL\'A\'IR\'AS}
 }
 EOF
-	sed -i "/Define the locale setups in docbook/r tmp.txt" $F_DBK_LOCALE
+
+	if [[ "$OSTYPE" == "darwin"* ]]; then
+		sed -i '' "/Define the locale setups in docbook/r tmp.txt" $F_DBK_LOCALE
+	else
+		sed -i "/Define the locale setups in docbook/r tmp.txt" $F_DBK_LOCALE
+	fi
+
 fi
 
 ## /usr/share/dblatex/xsl/common/hu.xml
 F_HUXML=$(locate xsl/common/hu.xml | head -n1)
 
-sed -i "s|\" &#233;s \"|\" \\\'{e\}s \"|g" $F_HUXML
-sed -i "s|\", &#233;s \"|\", \\\'{e\}s \"|g" $F_HUXML
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	sed -i '' "s|\" &#233;s \"|\" \\\'{e\}s \"|g" $F_HUXML
+	sed -i '' "s|\", &#233;s \"|\", \\\'{e\}s \"|g" $F_HUXML
+
+else
+	sed -i "s|\" &#233;s \"|\" \\\'{e\}s \"|g" $F_HUXML
+	sed -i "s|\", &#233;s \"|\", \\\'{e\}s \"|g" $F_HUXML
+fi
 
 ## /usr/share/dblatex/xsl/common/common.xsl
 F_COMMONXSL=$(locate xsl/common/common.xsl | head -n1)
 
 if ! grep -q "<\!--<xsl:text> \[FAMILY" $F_COMMONXSL; then
-	sed -i "s|<xsl\:text> \[FAMILY Given\]</xsl\:text>|<!--<xsl:text> [FAMILY Given]</xsl:text>-->|g" $F_COMMONXSL
+	if [[ "$OSTYPE" == "darwin"* ]]; then
+		sed -i '' "s|<xsl\:text> \[FAMILY Given\]</xsl\:text>|<!--<xsl:text> [FAMILY Given]</xsl:text>-->|g" $F_COMMONXSL
+	else
+		sed -i "s|<xsl\:text> \[FAMILY Given\]</xsl\:text>|<!--<xsl:text> [FAMILY Given]</xsl:text>-->|g" $F_COMMONXSL
+	fi
 fi
 
 # TODO:
@@ -58,7 +74,13 @@ fi
 # Addig, a következő hacky megoldás:
 
 cp $F_COMMONXSL $F_COMMONXSL.bak
-sed -i "s|\ \ \ \ <xsl:text>, <\/xsl:text>|\ \ \ \ <xsl:text> <\/xsl:text>|g" $F_COMMONXSL
+
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	sed -i '' "s|\ \ \ \ <xsl:text>, <\/xsl:text>|\ \ \ \ <xsl:text> <\/xsl:text>|g" $F_COMMONXSL
+else
+	sed -i "s|\ \ \ \ <xsl:text>, <\/xsl:text>|\ \ \ \ <xsl:text> <\/xsl:text>|g" $F_COMMONXSL
+fi
 
 # Cleanup
 rm -f tmp.txt >/dev/null 2>&1

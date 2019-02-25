@@ -19,3 +19,4 @@ sudo ./patch.sh
 # Kézzel csinálnád?
 
 Ezesetben kérlek olvasd el a [patch-by-hand.md](patch-by-hand.md) dokumentumot.
+

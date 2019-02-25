@@ -5,7 +5,12 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-updatedb > /dev/null 2>&1
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+else
+	updatedb > /dev/null 2>&1
+fi
 
 ## /usr/share/dblatex/latex/style/dbk_locale.sty
 F_DBK_LOCALE=$(locate dbk_locale.sty | head -n1)

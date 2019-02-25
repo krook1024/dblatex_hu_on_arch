@@ -44,7 +44,7 @@ sed -i "s|\", &#233;s \"|\", \\\'{e\}s \"|g" $F_HUXML
 ## /usr/share/dblatex/xsl/common/common.xsl
 F_COMMONXSL=$(locate xsl/common/common.xsl | head -n1)
 
-if ! grep -q "<\!--<xsl:text> \[FAMILY" /usr/share/dblatex/xsl/common/common.xsl; then
+if ! grep -q "<\!--<xsl:text> \[FAMILY" $F_COMMONXSL; then
 	sed -i "s|<xsl\:text> \[FAMILY Given\]</xsl\:text>|<!--<xsl:text> [FAMILY Given]</xsl:text>-->|g" $F_COMMONXSL
 fi
 

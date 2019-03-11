@@ -5,6 +5,7 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
+echo "A patch alkalmazása..."
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist

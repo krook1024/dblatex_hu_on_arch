@@ -11,11 +11,10 @@ fog a többi Arch alapú disztró (Manjaro, Antergos, stb.) alatt is.
 # Hogyan futtasd?
 
 ```bash
-curl https://git.io/fhj4c | sudo bash
-sudo ./patch.sh
+curl -L https://git.io/fhj4c | sudo bash
 ```
 
-A fenti link csak a https://raw.githubusercontent.com/krook1024/dblatex_hu_on_arch/master/patch.sh rövidítése.
+(A fenti link csak a https://raw.githubusercontent.com/krook1024/dblatex_hu_on_arch/master/patch.sh rövidítése.)
 
 # Kézzel csinálnád?
 

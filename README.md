@@ -1,4 +1,4 @@
-# DBLaTeX magyar kompatibilitás *nix alapú OS-ek alatt
+# 📔 DBLaTeX magyar kompatibilitás *nix alapú OS-ek alatt
 
 Mivel volt némi problémám a DBLaTeX "magyarosításával", hogy a lefordított dokumentumok
 szebben jelenjenek meg, valamint ne legyenek problémák a karakterkódolással, gondoltam
